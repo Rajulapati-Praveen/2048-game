@@ -1,10 +1,29 @@
 # 2048
 Falling-block number puzzle. Blocks stack from the top; shoot the next block up a column and matching neighbours merge.
 
+**Play online:** [game-fa643.web.app](https://game-fa643.web.app)
+
 **Want to publish? See [SUBMIT.md](SUBMIT.md) — a click-by-click guide for Google Play and the Apple App Store.**
 
 ## Run
 Open `index.html` in a browser, or serve the folder: `python3 -m http.server 8000` then visit http://localhost:8000
+
+## Free Google hosting (Firebase Hosting)
+This game is a static website, so it can be deployed with Firebase Hosting without a server. The included `firebase.json` serves only the web assets in `number-merge/www` and does not publish the Android or iOS project files.
+
+1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/) and use the no-cost Spark plan.
+2. Install the Firebase CLI: `npm install -g firebase-tools`
+3. From this repository's root folder, run:
+
+   ```
+   firebase login
+   firebase use --add
+   firebase deploy --only hosting
+   ```
+
+   When prompted, select the Firebase project you created. Firebase will print your public `*.web.app` URL after deployment.
+
+Hosting is free within Firebase's no-cost plan limits; check the Firebase usage dashboard as traffic grows. This publishes the website, not an Android app on Google Play.
 
 ## Controls
 Tap a column (or drag and release). Desktop: click, or arrow keys + Space.

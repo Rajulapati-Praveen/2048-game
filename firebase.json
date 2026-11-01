@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "number-merge/www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
