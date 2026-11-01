@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://game-fa643.web.app/sitemap.xml
+Sitemap: https://game-fa643.web.app/sitemap.txt
