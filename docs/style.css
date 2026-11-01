@@ -1,0 +1,27 @@
+:root{--bg:#050507;--fg:#fff;--pan:#1a1b21;--mut:#8a8d99}
+@media(prefers-color-scheme:light){:root{--bg:#050507}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;touch-action:none}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:"Trebuchet MS",system-ui,sans-serif;overflow:hidden}
+#app{height:100%;max-width:520px;margin:auto;display:flex;flex-direction:column;padding:env(safe-area-inset-top,0) 6px env(safe-area-inset-bottom,0)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:10px 4px;font-weight:700}
+.pill{background:var(--pan);border-radius:20px;padding:5px 12px;font-size:14px;min-width:84px;text-align:center}
+#score{font-size:30px;transition:transform .12s}
+#score.pop{transform:scale(1.35)}
+#stage{flex:1;min-height:0;display:flex;justify-content:center;align-items:flex-start;border-top:1px solid #222}
+canvas{display:block}
+.bot{display:flex;flex-direction:column;align-items:center;gap:8px;padding:10px 0 12px;border-top:1px solid #222}
+.row{display:flex;align-items:center;gap:22px}
+.cur{width:56px;height:56px;border-radius:10px;border:3px solid #fff;display:grid;place-items:center;font-size:22px;font-weight:800}
+.nx{font-size:12px;color:var(--mut);text-align:center}.nx b{display:block;font-size:18px;color:#fff}
+.btn{background:var(--pan);color:#fff;border:0;border-radius:14px;padding:12px 18px;font:700 16px inherit;cursor:pointer}
+.pw{position:relative;width:62px;height:56px;background:var(--pan);border-radius:14px;font-size:24px}
+.pw small{position:absolute;bottom:2px;left:0;right:0;font-size:11px;color:#6cf}
+.pw.on{outline:3px solid #ffb02e}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;z-index:5}
+.ov.show{display:flex;animation:in .3s}
+@keyframes in{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.ov h1{font-size:40px;margin:0;letter-spacing:2px;background:linear-gradient(90deg,#2a8fd8,#ff7a2e,#ec4f8c);-webkit-background-clip:text;color:transparent}
+.ov .btn{width:240px;background:linear-gradient(#3aa0e8,#2275b8)}
+.ov .btn.s{background:var(--pan)}
+.ov p{max-width:300px;color:#ccd;line-height:1.5;margin:0}
+.tg{display:flex;justify-content:space-between;width:240px;align-items:center}
